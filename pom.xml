@@ -10,11 +10,20 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version>              
-        <javafx.version>21.0.2</javafx.version>      
-        <javafx.platform>win</javafx.platform>       
-        <shade.finalName>dofus-drop-calculator</shade.finalName>
+        <java.version>17</java.version>
+        <javafx.version>21.0.2</javafx.version>
     </properties>
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-bom</artifactId>
+          <version>${javafx.version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
     <!-- =========  LIBRAIRIES UI  ========= -->
     <dependencies>
         <!-- ControlsFX 11.2.2  ✅ -->
@@ -47,49 +56,26 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
-            <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
-            <exclusions>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-base</artifactId></exclusion>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-graphics</artifactId></exclusion>
-            </exclusions>
         </dependency>
         <!-- *** MANQUANT → on l’ajoute *** -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
-            <exclusions>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-base</artifactId></exclusion>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-graphics</artifactId></exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
-            <exclusions>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-base</artifactId></exclusion>
-                <exclusion><groupId>org.openjfx</groupId><artifactId>javafx-graphics</artifactId></exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
     <build>
-        <finalName>${shade.finalName}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -112,28 +98,6 @@
                 <configuration>
                     <mainClass>boune.Launcher</mainClass>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.1</version>
-                <executions>
-                    <execution>
-                        <id>fat-jar</id>
-                        <phase>package</phase>
-                        <goals><goal>shade</goal></goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>boune.Launcher</mainClass>
-                                </transformer>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                            </transformers>
-                            <minimizeJar>false</minimizeJar>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
