@@ -37,3 +37,34 @@ l'archive se trouve dans `target/dofus-drop-calculator.jar`. Pour la lancer :
 ```bash
 java -jar target/dofus-drop-calculator.jar
 ```
+
+## Générer une image autonome avec jpackage
+
+Pour créer un exécutable Windows embarquant la JRE et JavaFX :
+
+```bash
+mvn clean javafx:jpackage
+```
+
+Le résultat se trouve dans `target/jpackage/` et fonctionne sans Java installé.
+
+## Lancer le JAR avec les bibliothèques natives
+
+Placez les dépendances JavaFX pour Windows dans un dossier `javafx` à côté du
+JAR puis utilisez le script `run.bat` :
+
+```bat
+@echo off
+set FX=%~dp0javafx
+java --module-path "%FX%" --add-modules javafx.controls,javafx.media -jar "%~dp0dofus-drop-calculator.jar"
+pause
+```
+
+## Astuce de nettoyage
+
+Assurez-vous de lancer la commande Maven depuis la racine du projet :
+
+```bash
+cd ..
+mvn clean package
+```

@@ -76,7 +76,15 @@
                 <version>${javafx.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>boune.DofusDropCalculator</mainClass>
+                    <appName>DofusDropCalculator</appName>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jpackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
