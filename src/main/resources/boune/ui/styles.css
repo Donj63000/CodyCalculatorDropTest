@@ -1,0 +1,26 @@
+.root {
+    -fx-font-family: "Inter", "Verdana", sans-serif;
+    -fx-background-color: -bg;
+}
+
+.label.title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff9900;
+}
+
+.label.subtitle {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.primary-button {
+    -fx-background-radius: 6;
+    -fx-background-color: linear-gradient(#ffcc00 , #f4b600);
+    -fx-font-weight: bold;
+}
+
+.root:dark {
+    -bg: #202124;
+    /* Text, buttons, etc. */
+}
