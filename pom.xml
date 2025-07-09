@@ -111,7 +111,6 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>boune.Launcher</mainClass>
-                    <jvmArgs>--enable-native-access=ALL-UNNAMED</jvmArgs>
                 </configuration>
             </plugin>
             <plugin>
