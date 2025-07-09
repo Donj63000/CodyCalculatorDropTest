@@ -68,3 +68,16 @@ Assurez-vous de lancer la commande Maven depuis la racine du projet :
 cd ..
 mvn clean package
 ```
+
+## Résolution du dossier `target` verrouillé
+
+Sous Windows, `mvn clean` peut échouer si un processus garde un fichier ouvert
+dans `target/`. Fermez toute fenêtre exécutant le JAR ou un test JavaFX,
+puis relancez :
+
+```powershell
+mvn -U clean package
+```
+
+Le `pom.xml` configure désormais le plugin `maven-clean-plugin` avec
+`failOnError=false` pour continuer le build même en cas de fichier verrouillé.
