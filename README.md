@@ -43,10 +43,10 @@ java -jar target/dofus-drop-calculator.jar
 Pour créer un exécutable Windows embarquant la JRE et JavaFX :
 
 ```bash
-mvn clean javafx:jpackage
+mvn clean javafx:jlink jpackage:jpackage
 ```
 
-Le résultat se trouve dans `target/jpackage/` et fonctionne sans Java installé.
+Le résultat se trouve dans `target/installer/` et fonctionne sans Java installé.
 
 ## Lancer le JAR avec les bibliothèques natives
 

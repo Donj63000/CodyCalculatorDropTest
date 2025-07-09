@@ -77,12 +77,34 @@
                 <configuration>
                     <mainClass>boune.DofusDropCalculator</mainClass>
                     <appName>DofusDropCalculator</appName>
+                    <jlinkImageName>image</jlinkImageName>
                 </configuration>
                 <executions>
                     <execution>
+                        <id>create-runtime</id>
                         <goals>
-                            <goal>jpackage</goal>
+                            <goal>jlink</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.6</version>
+                <executions>
+                    <execution>
+                        <id>package-windows</id>
+                        <goals><goal>jpackage</goal></goals>
+                        <configuration>
+                            <name>DofusDropCalculator</name>
+                            <destination>${project.build.directory}/installer</destination>
+                            <runtimeImage>${project.build.directory}/image</runtimeImage>
+                            <winMenu>true</winMenu>
+                            <icon>${project.basedir}/src/main/resources/icon.ico</icon>
+                            <winShortcut>true</winShortcut>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
