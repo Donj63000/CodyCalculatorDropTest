@@ -27,6 +27,8 @@ public class DofusDropCalculator extends Application {
         } catch (Exception ignored) { }
 
         Scene scene = new Scene(root, 450, 500);
+        scene.getStylesheets().add(
+                getClass().getResource("/boune/ui/styles.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }
