@@ -48,17 +48,37 @@ mvn clean javafx:jlink jpackage:jpackage
 
 Le résultat se trouve dans `target/installer/` et fonctionne sans Java installé.
 
-## Lancer le JAR avec les bibliothèques natives
+## Lancer le JAR avec `run.bat`
 
-Placez les dépendances JavaFX pour Windows dans un dossier `javafx` à côté du
-JAR puis utilisez le script `run.bat` :
+Cody, pour exécuter facilement l'application depuis Windows, crée un fichier
+`run.bat` dans le même dossier que `dofus-drop-calculator.jar` et copie-y le
+script suivant :
 
 ```bat
 @echo off
-set FX=%~dp0javafx
-java --module-path "%FX%" --add-modules javafx.controls,javafx.media -jar "%~dp0dofus-drop-calculator.jar"
+rem -----------------------------------------------------------
+rem  Lance DofusDropCalculator depuis ce dossier (target)
+rem -----------------------------------------------------------
+
+:: Se place dans le répertoire où se trouve le script
+pushd "%~dp0"
+
+:: Optionnel : si JAVA_HOME est défini, on l’utilise
+if exist "%JAVA_HOME%\bin\java.exe" (
+    set "JAVA_CMD=%JAVA_HOME%\bin\java.exe"
+) else (
+    set "JAVA_CMD=java"
+)
+
+:: Exécution – on garde la console ouverte après coup
+"%JAVA_CMD%" --enable-native-access=ALL-UNNAMED ^
+             -jar "%~dp0dofus-drop-calculator.jar"
+
 pause
 ```
+
+Une fois le fichier enregistré, double-clique simplement sur `run.bat` pour
+lancer le calculateur.
 
 ## Astuce de nettoyage
 
