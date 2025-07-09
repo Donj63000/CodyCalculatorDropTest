@@ -24,7 +24,7 @@
             <Spinner fx:id="ppSpinner" prefWidth="120" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
             <Button fx:id="calcBtn" text="Calculer 🎲"
-                    GridPane.rowIndex="2" GridPane.columnIndexSpan="2"
+                    GridPane.rowIndex="2" GridPane.columnSpan="2"
                     styleClass="primary-button"/>
         </GridPane>
     </center>
