@@ -1,0 +1,235 @@
+{
+  "differential_tests": [
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.__getattr__",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type de retour non supporté @ python/specfence_py/__init__.py:13",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._annotation_name",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour node @ python/specfence_py/differential.py:246",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._call_name",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour node @ python/specfence_py/differential.py:318",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._execute_case",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour snapshot_dir @ python/specfence_py/differential.py:477",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._is_probably_pure",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour function_node @ python/specfence_py/differential.py:351",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._materialize_snapshot",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour snapshot @ python/specfence_py/differential.py:470",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._module_name_from_path",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "fonction absente de base ou head",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._parse_supported_type",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour annotation @ python/specfence_py/differential.py:198",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._run_git",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "*args/**kwargs non supportés @ python/specfence_py/differential.py:137",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._skip_message",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "fonction absente de base ou head",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._subscript_args",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour node @ python/specfence_py/differential.py:255",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._trace_mismatch",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour old_result @ python/specfence_py/differential.py:548",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._value_pool",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour type_spec @ python/specfence_py/differential.py:426",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential._write_result",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour result_path @ python/specfence_py/differential.py:641",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.build_arg_parser",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type de retour non supporté @ python/specfence_py/differential.py:650",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.collect_candidates",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour snapshot @ python/specfence_py/differential.py:364",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.compare_execution",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour old_result @ python/specfence_py/differential.py:519",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.generate_cases",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour candidate @ python/specfence_py/differential.py:459",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.load_snapshot",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour repo_root @ python/specfence_py/differential.py:169",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.main",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour argv @ python/specfence_py/differential.py:664",
+      "status": "skip"
+    },
+    {
+      "cases_executed": [],
+      "event": null,
+      "function": "specfence_py.differential.run_differential_analysis",
+      "mismatch": null,
+      "proofs": [
+        "présence asymétrique entre snapshots"
+      ],
+      "reason": "type non supporté pour config @ python/specfence_py/differential.py:554",
+      "status": "skip"
+    }
+  ]
+}
