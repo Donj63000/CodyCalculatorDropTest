@@ -30,12 +30,11 @@ mvn clean      # nettoie le dossier target
 mvn compile    # compile les sources
 mvn package    # produit dofus-drop-calculator.jar dans target/
 ```
-
-Le plugin *maven-shade* créera un JAR exécutable. Une fois la commande terminée,
-l'archive se trouve dans `target/dofus-drop-calculator.jar`. Pour la lancer :
+La commande `mvn package` produit un JAR standard dans `target/`. Pour exécuter
+le projet plus simplement, utilisez :
 
 ```bash
-java -jar target/dofus-drop-calculator.jar
+mvn javafx:run
 ```
 
 ## Générer une image autonome avec jpackage
